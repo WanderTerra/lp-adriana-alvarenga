@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sua Jornada Cirúrgica em 8 Semanas | Dra. Adriana Alvarenga</title>
+<meta name="description" content="Acompanhamento médico completo durante 8 semanas para viver sua cirurgia com segurança: preparo físico e emocional, orientação para o dia do procedimento e suporte na recuperação, para você e sua família.">
+<!-- TODO (SEO): preencher com o domínio real assim que a página estiver publicada -->
+<!-- <link rel="canonical" href="https://SEU-DOMINIO-AQUI/"> -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Sua Jornada Cirúrgica em 8 Semanas | Dra. Adriana Alvarenga">
+<meta property="og:description" content="Acompanhamento médico completo durante 8 semanas para viver sua cirurgia com segurança: preparo, orientação e suporte para você e sua família.">
+<!-- TODO (SEO): og:image precisa de uma URL pública (não funciona com imagem embutida em base64) — definir junto com o domínio -->
+<!-- <meta property="og:image" content="https://SEU-DOMINIO-AQUI/preview.jpg"> -->
+<!-- <meta property="og:url" content="https://SEU-DOMINIO-AQUI/"> -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sua Jornada Cirúrgica em 8 Semanas | Dra. Adriana Alvarenga">
+<meta name="twitter:description" content="Acompanhamento médico completo durante 8 semanas para viver sua cirurgia com segurança: preparo, orientação e suporte para você e sua família.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -56,25 +69,27 @@
   h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:.01em}
   .rule{height:1px;width:64px;background:var(--dourado-linha);margin:0 auto;border:0}
 
-  /* ===== MASTHEAD: MARCA (fundo claro) ===== */
-  .masthead{background:var(--branco);padding:34px 0 26px;text-align:center}
-  .brand{display:flex;flex-direction:column;align-items:center;gap:12px}
-  .brand-lockup{width:min(260px,58vw);height:auto;display:block;margin:0 auto 2px}
+  /* ===== MASTHEAD: MARCA (fundo claro, tela cheia) ===== */
+  .masthead{background:var(--branco);padding:32px 0;text-align:center;min-height:100svh;display:flex;flex-direction:column;justify-content:center;box-sizing:border-box}
+  .brand{display:flex;flex-direction:column;align-items:center;gap:16px}
+  .brand-lockup{width:min(460px,80vw);height:auto;display:block;margin:0 auto 2px}
   .brand-text{margin-bottom:0}
   .brand-lockup+.brand-text .brand-sub, .brand-text .brand-sub{margin-top:0}
   .brand-dra{font-family:var(--sans);font-weight:500;font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--tinta-suave);text-align:left;max-width:340px;margin:0 auto;padding-left:2px}
   .monogram path,.monogram ellipse{stroke:url(#gold);fill:none;stroke-width:1.3}
   .brand-name{font-family:var(--serif);font-weight:600;font-size:clamp(1.5rem,4.6vw,2.05rem);letter-spacing:.1em;color:var(--tinta);line-height:1;margin:2px 0 4px;-webkit-font-smoothing:antialiased}
-  .brand-sub{font-family:var(--sans);font-weight:300;font-size:.62rem;letter-spacing:.19em;text-transform:uppercase;color:var(--tinta-suave)}
+  .brand-sub{font-family:var(--sans);font-weight:300;font-size:.68rem;letter-spacing:.19em;text-transform:uppercase;color:var(--tinta-suave)}
+  .masthead-eyebrow{margin-top:6px}
+  .masthead-question{font-family:var(--serif);font-weight:600;color:var(--tinta);font-size:clamp(1.15rem,3.6vw,1.5rem);max-width:520px;margin:22px auto 0;line-height:1.25}
+  .masthead-lead{font-family:var(--sans);font-weight:300;font-size:.95rem;color:var(--tinta-suave);max-width:480px;margin:12px auto 0}
 
   /* ===== TOPO: TÍTULO + PLAYER (fundo oliva) ===== */
-  .top{background:var(--oliva);color:#f2f0e6;padding:36px 0;text-align:center;min-height:calc(100svh - 130px);display:flex;flex-direction:column;justify-content:center;box-sizing:border-box}
+  .top{background:var(--oliva);color:#f2f0e6;padding:36px 0;text-align:center;min-height:100svh;display:flex;flex-direction:column;justify-content:center;box-sizing:border-box}
 
   .hero-eyebrow{color:var(--dourado-1);opacity:.9}
   .hero-rule{width:90px;height:2px;border-radius:2px;margin:4px auto 14px;background:var(--dourado-linha);opacity:.9}
   .hero-title{font-size:clamp(1.6rem,5vw,2.6rem);color:#fff;margin:8px 0 6px}
   .hero-title em{font-style:italic;color:var(--dourado-1)}
-  .hero-lead{font-family:var(--sans);font-weight:300;font-size:.95rem;color:#e4e6d5;max-width:500px;margin:0 auto 18px}
 
   /* ===== PLAYER TRAVADO ===== */
   .player{width:min(560px,90vw,78vh);margin:0 auto;border-radius:14px;overflow:hidden;
@@ -247,7 +262,7 @@
   .center .eyebrow::before,.center .eyebrow::after{content:"";display:inline-block;width:24px;height:1px;background:var(--dourado-linha);vertical-align:middle;opacity:.7}
   .center .eyebrow::before{margin-right:12px}
   .center .eyebrow::after{margin-left:12px}
-  @media (max-height:760px){ .hero-lead{display:none} .top{padding:12px 0} }
+  @media (max-height:760px){ .top{padding:12px 0} }
   @media (max-height:640px){ .brand-lockup{width:min(180px,42vw)} .hero-title{font-size:clamp(1.35rem,4.5vw,1.9rem)} }
 </style>
 </head>
@@ -272,6 +287,9 @@
           <div class="brand-sub">Oncologia Cirúrgica e Cirurgia Minimamente Invasiva</div>
         </div>
       </div>
+      <p class="eyebrow masthead-eyebrow">Acompanhamento médico completo · 8 semanas</p>
+      <p class="masthead-question">Você ou alguém que você ama vai passar por uma cirurgia?</p>
+      <p class="masthead-lead">Receba acompanhamento médico completo durante 8 semanas para entender cada etapa da sua jornada cirúrgica, preparar o corpo, a mente e a família, e saber exatamente qual é o próximo passo antes, durante e depois do procedimento.</p>
     </div>
   </section>
 
@@ -279,9 +297,7 @@
   <header class="top">
     <div class="wrap">
       <div class="hero-rule"></div>
-      <p class="eyebrow hero-eyebrow">Acompanhamento médico completo · 8 semanas</p>
       <h1 class="hero-title">Ninguém deveria descobrir<br>o caminho de uma <em>cirurgia</em><br>apenas enquanto caminha</h1>
-      <p class="hero-lead">Você ou alguém que você ama vai passar por uma cirurgia? Assista ao vídeo abaixo e receba acompanhamento médico completo durante 8 semanas para entender cada etapa da sua jornada cirúrgica, preparar o corpo, a mente e a família, e saber exatamente qual é o próximo passo antes, durante e depois do procedimento.</p>
 
       <!-- PLAYER TRAVADO (simulado) -->
       <div class="player">
