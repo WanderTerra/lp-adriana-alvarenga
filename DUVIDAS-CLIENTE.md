@@ -33,4 +33,15 @@ Os valores usados na seção de oferta hoje foram mantidos do site original (De 
 
 - Vídeo real (hoje é uma simulação)
 - Fotos/prints/depoimentos de pacientes (seção 11 do MD)
-- Foto profissional da Dra. Adriana (seção "Quem será sua mentora")
+- Foto profissional da Dra. Adriana (seção "Quem será sua mentora") — ✅ já adicionada
+
+## 6. Consentimento das pacientes nos depoimentos (IMPORTANTE)
+
+A cliente enviou uma pasta do Drive com conversas reais de WhatsApp/Instagram entre pacientes e a Dra. Adriana. Usei apenas duas frases curtas e positivas dessas conversas na seção "O que dizem os pacientes", **sem nome, foto ou telefone** — atribuídas só como "Paciente".
+
+Duas coisas que ainda precisam ser confirmadas com ela antes dessa seção ficar definitiva:
+
+1. **Consentimento** — as pacientes autorizaram explicitamente o uso dessas mensagens (mesmo anonimizadas) em material de marketing? Dado de saúde é "dado sensível" pela LGPD; o ideal é ter essa autorização documentada (nem que seja um "pode usar sim" por WhatsApp mesmo).
+2. **Publicidade médica (CFM)** — o Código de Ética Médica e resoluções do CFM sobre publicidade restringem bastante o uso de depoimentos de pacientes em propaganda de médicos. Vale ela (ou o contador/assessoria jurídica dela) confirmar se esse formato de depoimento é permitido, mesmo anonimizado.
+
+Importante: **não usei** o material de uma das pacientes (4 das 6 imagens enviadas) porque era uma conversa de acompanhamento clínico real (complicação pós-cirúrgica, fístula, curativos, remédios) — isso não é depoimento de marketing e é sensível demais pra aparecer no site de qualquer forma, mesmo anonimizado.
