@@ -188,11 +188,21 @@
   .stack{max-width:560px;margin:22px auto 0;display:grid;gap:14px}
   .stack p{font-size:1.05rem}
 
-  /* placeholders (depoimentos / mentora) */
+  /* placeholders (mentora) */
   .placeholder{max-width:600px;margin:26px auto 0;border:1px dashed rgba(122,110,60,.5);border-radius:14px;
     padding:38px 24px;text-align:center;background:rgba(255,255,255,.4)}
   .placeholder .ph-label{font-family:var(--sans);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dourado-solid);margin-bottom:8px}
   .placeholder p{color:var(--tinta-suave);font-size:.95rem}
+
+  /* depoimentos (citações anonimizadas) */
+  .testimonials{display:grid;gap:18px;max-width:640px;margin:30px auto 0;text-align:left}
+  @media(min-width:640px){ .testimonials{grid-template-columns:1fr 1fr} }
+  .testimonial-card{background:var(--branco);border-radius:14px;padding:26px 24px;
+    box-shadow:0 16px 34px -22px rgba(60,60,20,.35)}
+  .testimonial-card p{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--tinta);line-height:1.4}
+  .testimonial-card .attr{margin-top:14px;font-family:var(--sans);font-size:.7rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--dourado-solid)}
+  .testimonials-note{max-width:600px;margin:20px auto 0;font-size:.85rem;color:var(--tinta-suave)}
   .mentora{display:grid;grid-template-columns:190px 1fr;gap:28px;align-items:center;max-width:620px;margin:26px auto 0}
   .mentora .photo{aspect-ratio:3/4;width:100%;border-radius:12px;background:var(--salvia);display:block;object-fit:cover;
     box-shadow:0 18px 40px -20px rgba(60,60,20,.45)}
@@ -499,10 +509,17 @@
       <div class="wrap center reveal-on-scroll">
         <p class="eyebrow">O que dizem os pacientes</p>
         <h2>Histórias de quem já passou por essa jornada</h2>
-        <div class="placeholder">
-          <div class="ph-label">Espaço reservado</div>
-          <p>Aqui entram vídeos, fotos, prints e resultados dos pacientes assim que o material for enviado.</p>
+        <div class="testimonials">
+          <div class="testimonial-card">
+            <p>"Estou melhorando, graças a Deus. Amei ter a Dra. Adriana me dando todo o apoio e cuidado durante minha recuperação."</p>
+            <div class="attr">Paciente</div>
+          </div>
+          <div class="testimonial-card">
+            <p>"Parabéns para a melhor cirurgiã, humana e que faz tudo com amor."</p>
+            <div class="attr">Paciente</div>
+          </div>
         </div>
+        <p class="testimonials-note">Mais vídeos, fotos e resultados de pacientes em breve.</p>
       </div>
     </section>
 
