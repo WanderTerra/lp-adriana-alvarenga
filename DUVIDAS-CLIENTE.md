@@ -13,11 +13,13 @@ Isso tem uma consequência técnica: como o Google não clica em "assistir", ele
 - Se **não** → tudo certo, não precisa mexer em mais nada além do que já foi feito (meta description, Open Graph).
 - Se **sim** → existe uma forma de resolver sem tirar a trava visual (trocar "revelar por clique" por "revelar por timer automático" ao carregar a página), mas é um ajuste técnico adicional que precisa ser combinado, já que muda o comportamento de quando o conteúdo é liberado.
 
-## 2. Domínio / publicação
+## 2. Domínio / publicação — ✅ Resolvido
 
-Para terminar o SEO básico da página falta:
-- **Qual vai ser a URL final** (domínio) onde a página vai ficar publicada — necessário para preencher `canonical` e `og:url` no `<head>`.
-- **Uma imagem de preview** (para `og:image`, o card que aparece quando o link é compartilhado no WhatsApp/Instagram/Facebook). Precisa ser um arquivo hospedado com URL pública — não dá pra usar a logo embutida em base64 que está no código hoje.
+Domínio definido: **suajornadacirurgica.com.br** (Hostinger). Já atualizado `canonical`, `og:url`, `og:image` e `twitter:image` no `<head>` apontando pra esse domínio.
+
+Gerei uma imagem de preview (`preview.png`, 1200×630) com a logo e o selo "Acompanhamento médico completo · 8 semanas" — precisa subir junto com o `index.html` na raiz do site (veja instruções de publicação abaixo).
+
+⚠️ **Pendência técnica:** o domínio ainda está como "Configuração pendente" no painel do Hostinger — falta apontar/conectar ele pra um plano de hospedagem antes de subir os arquivos.
 
 ## 3. Garantia — ✅ Resolvido
 
