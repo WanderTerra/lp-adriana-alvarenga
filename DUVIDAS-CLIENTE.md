@@ -19,11 +19,9 @@ Para terminar o SEO básico da página falta:
 - **Qual vai ser a URL final** (domínio) onde a página vai ficar publicada — necessário para preencher `canonical` e `og:url` no `<head>`.
 - **Uma imagem de preview** (para `og:image`, o card que aparece quando o link é compartilhado no WhatsApp/Instagram/Facebook). Precisa ser um arquivo hospedado com URL pública — não dá pra usar a logo embutida em base64 que está no código hoje.
 
-## 3. Garantia
+## 3. Garantia — ✅ Resolvido
 
-O MD de copy pede um bloco "Garantia de (X dias)" que já foi adicionado na seção de oferta, mas **o prazo de dias ainda está com placeholder** (`[X]` dias) — marcado com comentário `TODO` no código.
-
-**Perguntar para a cliente:** quantos dias de garantia ela quer oferecer?
+Confirmado com a cliente: **7 dias**. Já atualizado no código (removido o placeholder `[X]` e o comentário `TODO`).
 
 ## 4. Preço
 
