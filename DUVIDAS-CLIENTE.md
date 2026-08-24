@@ -34,6 +34,7 @@ Os valores usados na seção de oferta hoje foram mantidos do site original (De 
 - Vídeo real (hoje é uma simulação)
 - Fotos/prints/depoimentos de pacientes (seção 11 do MD)
 - Foto profissional da Dra. Adriana (seção "Quem será sua mentora") — ✅ já adicionada
+- **Thumbnails das 8 aulas** (seção "Como funciona a Jornada Cirúrgica") — a seção agora usa cards no modelo da referência (selo + título + texto + imagem da aula), com um espaço reservado (placeholder tracejado) pronto pra cada uma das 8 semanas. Preciso de 1 imagem por semana (thumbnail/capa da aula, formato retrato) pra substituir os placeholders.
 
 ## 6. Consentimento das pacientes nos depoimentos (IMPORTANTE)
 
