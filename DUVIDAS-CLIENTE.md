@@ -46,3 +46,13 @@ Duas coisas que ainda precisam ser confirmadas com ela antes dessa seção ficar
 2. **Publicidade médica (CFM)** — o Código de Ética Médica e resoluções do CFM sobre publicidade restringem bastante o uso de depoimentos de pacientes em propaganda de médicos. Vale ela (ou o contador/assessoria jurídica dela) confirmar se esse formato de depoimento é permitido, mesmo anonimizado.
 
 Importante: **não usei** o material de uma das pacientes (4 das 6 imagens enviadas) porque era uma conversa de acompanhamento clínico real (complicação pós-cirúrgica, fístula, curativos, remédios) — isso não é depoimento de marketing e é sensível demais pra aparecer no site de qualquer forma, mesmo anonimizado.
+
+## 7. Seção "Mentora" — dados reais preenchidos, mas incompletos
+
+Busquei informações públicas no site profissional dela (adrianaalvarenga.lovable.app) e preenchi os placeholders da seção "Quem está por trás da sua Jornada Cirúrgica" com dados reais e verificáveis:
+
+- Formação: Cirurgia Oncológica pelo Hospital de Câncer de Barretos, residência em Cirurgia Geral
+- CRM 9199/MS · CRM 193405/SP · RQE 8135 (Cirurgia Oncológica) · RQE 7876 (Cirurgia Geral)
+- Atendimento em Campo Grande/MS (consultório, on-line e domiciliar, adulto e infantil)
+
+**O que ainda falta:** o site de referência não publica números (anos de experiência, quantidade de pacientes acompanhados, quantidade de cirurgias realizadas). Removi os placeholders `+[X]` que existiam pra esses números — **se ela quiser esse tipo de estatística na página, preciso que me passe os números reais** (não posso estimar/inventar isso).
