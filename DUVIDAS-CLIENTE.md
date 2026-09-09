@@ -56,3 +56,7 @@ Busquei informações públicas no site profissional dela (adrianaalvarenga.lova
 - Atendimento em Campo Grande/MS (consultório, on-line e domiciliar, adulto e infantil)
 
 **O que ainda falta:** o site de referência não publica números (anos de experiência, quantidade de pacientes acompanhados, quantidade de cirurgias realizadas). Removi os placeholders `+[X]` que existiam pra esses números — **se ela quiser esse tipo de estatística na página, preciso que me passe os números reais** (não posso estimar/inventar isso).
+
+## 8. Novo depoimento (pendente)
+
+Pedido via WhatsApp (25/08): "Vamos acrescentar apenas mais um depoimento" na seção de Histórias/Depoimentos. Ainda não recebi o conteúdo desse depoimento (texto, atribuição). **Aguardando o texto pra adicionar** — não inventei nada nesse meio tempo.
