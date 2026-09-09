@@ -248,6 +248,10 @@
     font-size:clamp(1.22rem,3.4vw,1.7rem);line-height:1.38;max-width:560px;margin:22px auto 0}
   .pivot-line em{font-style:italic;color:var(--dourado-solid)}
 
+  /* nome do programa: sempre com destaque, onde quer que apareça no corpo do texto
+     (não aplicado dentro dos botões de CTA — lá o fundo já é dourado, ficaria sem contraste) */
+  .jornada{color:var(--dourado-solid);font-weight:600}
+
   /* TIMELINE 8 SEMANAS (elemento-assinatura) */
   /* cards "como funciona" (semana a semana) — selo + título + texto + thumbnail da aula */
   .week-cards{max-width:900px;margin:34px auto 0;display:grid;gap:22px;text-align:left}
@@ -508,7 +512,7 @@
     <!-- O que você recebe (resumo pós-liberação) -->
     <section class="section section--salvia">
       <div class="wrap center reveal-on-scroll">
-        <h2>Enquanto o cirurgião cuida da técnica, a Sua Jornada Cirúrgica cuida de tudo o que acontece antes e depois da sua cirurgia</h2>
+        <h2>Enquanto o cirurgião cuida da técnica, a <span class="jornada">Sua Jornada Cirúrgica</span> cuida de tudo o que acontece antes e depois da sua cirurgia</h2>
         <p class="lead muted">O que você recebe:</p>
         <ul class="item-cards">
           <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Um protocolo estruturado em 8 semanas, na ordem em que a cirurgia realmente acontece</p></li>
@@ -524,7 +528,7 @@
     <!-- Depoimentos -->
     <section class="section section--nude">
       <div class="wrap center reveal-on-scroll">
-        <h2>Histórias de quem já passou pela Jornada Cirúrgica:</h2>
+        <h2>Histórias de quem já passou pela <span class="jornada">Jornada Cirúrgica</span>:</h2>
         <div class="testimonials">
           <div class="testimonial-card">
             <h3>Uma recuperação mais tranquila</h3>
@@ -559,7 +563,7 @@
           <li class="mini-card punch"><p>No lugar da informação, sobra o medo.</p></li>
         </ul>
         <hr class="rule" style="margin:22px auto 0">
-        <p class="pivot-line">A Sua Jornada Cirúrgica nasceu para ocupar exatamente <em>esse espaço vazio</em>: o intervalo entre o "você vai precisar operar" e o dia em que a vida volta ao lugar.</p>
+        <p class="pivot-line">A <span class="jornada">Sua Jornada Cirúrgica</span> nasceu para ocupar exatamente <em>esse espaço vazio</em>: o intervalo entre o "você vai precisar operar" e o dia em que a vida volta ao lugar.</p>
       </div>
     </section>
 
@@ -586,7 +590,7 @@
     <!-- Imagine -->
     <section class="section section--nude">
       <div class="wrap center reveal-on-scroll">
-        <h2>Agora troque o cenário. Imagine chegar ao dia da cirurgia sabendo exatamente o que vai acontecer</h2>
+        <h2>Agora troque o cenário. Imagine chegar ao dia da cirurgia sabendo o que vai acontecer:</h2>
         <div class="vision-cards">
           <div class="vision-card">
             <span class="vision-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm-1 15l-5-5 1.4-1.4L11 14.2l7.6-7.6L20 8l-9 9z"/></svg></span>
@@ -598,11 +602,11 @@
           </div>
           <div class="vision-card">
             <span class="vision-icon"><svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v9h-5v-6h-2v6H6v-9H3z"/></svg></span>
-            <p>E quando você volta para casa, não existe o "e agora?". Existe um próximo passo claro e alguém para confirmar que ele está certo.</p>
+            <p>E quando você volta para casa, não existe o "e agora?". Existe um próximo passo claro.</p>
           </div>
         </div>
         <hr class="rule" style="margin:28px auto 0">
-        <p class="pivot-line">A Jornada Cirúrgica não opera por você. Ela cuida de todo o resto: transforma semanas de incerteza em <em>um caminho com começo, meio e fim</em>.</p>
+        <p class="pivot-line">A <span class="jornada">Sua Jornada Cirúrgica</span> não opera por você. Ela orienta você em cada etapa, guiando para <em>um caminho com começo, meio e fim</em>.</p>
         <a class="cta cta--gold" data-checkout href="#" style="margin-top:26px">Quero ter uma recuperação orientada</a>
       </div>
     </section>
@@ -610,7 +614,7 @@
     <!-- 8 SEMANAS (assinatura) -->
     <section class="section section--salvia">
       <div class="wrap center reveal-on-scroll">
-        <h2>Como funciona a Jornada Cirúrgica</h2>
+        <h2>Como funciona a <span class="jornada">Jornada Cirúrgica</span></h2>
         <p class="lead muted" style="margin-top:8px">Um protocolo organizado do jeito que um paciente realmente vive uma cirurgia, e não do jeito que um curso costuma ser organizado. Você recebe exatamente o que precisa saber em cada momento da sua jornada.</p>
         <hr class="rule" style="margin-top:14px">
       </div>
@@ -654,31 +658,10 @@
       </div>
     </section>
 
-    <!-- O que inclui -->
-    <section class="section section--oliva">
-      <div class="wrap center reveal-on-scroll">
-        <h2>Muito mais do que um curso online</h2>
-        <p class="lead">Ao entrar para Sua Jornada Cirúrgica, você recebe:</p>
-        <ul class="item-cards item-cards--compact">
-          <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>O protocolo completo de 8 semanas, organizado cronologicamente</p></li>
-          <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Orientações para preparar seu organismo antes da cirurgia</p></li>
-          <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Cuidados para reduzir inseguranças antes da internação</p></li>
-          <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Orientações completas para o dia do procedimento</p></li>
-          <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Acompanhamento de toda a recuperação</p></li>
-          <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Orientações sobre alimentação, rotina e autocuidado</p></li>
-          <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Os sinais de alerta que merecem atenção</p></li>
-          <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Checklists para organizar tudo sem esquecer detalhes importantes</p></li>
-          <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Materiais de apoio para consultar sempre que surgir uma dúvida</p></li>
-          <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Orientações para que sua família saiba exatamente como cuidar de você em cada fase</p></li>
-        </ul>
-        <a class="cta cta--gold" data-checkout href="#" style="margin-top:26px">Quero receber tudo isso na minha Jornada</a>
-      </div>
-    </section>
-
     <!-- Diferencial -->
     <section class="section section--nude">
       <div class="wrap center reveal-on-scroll">
-        <h2>O que torna a Jornada Cirúrgica diferente?</h2>
+        <h2>O que torna a <span class="jornada">Jornada Cirúrgica</span> diferente?</h2>
         <p class="lead" style="margin-top:8px">Ela não substitui o acompanhamento do seu médico. Ela complementa aquilo que acontece entre uma consulta e outra, exatamente quando as dúvidas aparecem.</p>
         <p class="lead" style="margin-top:14px">Porque o cuidado não termina quando a cirurgia termina. Na verdade, é ali que começa a etapa em que surgem mais dúvidas. E porque o medo de uma cirurgia não escolhe diagnóstico, a Jornada foi pensada para qualquer pessoa que deseja viver esse momento de forma mais consciente e preparada.</p>
       </div>
@@ -714,7 +697,7 @@
           <div class="bonus-card">
             <div class="bonus-num">Bônus 03</div>
             <h3>Exercícios para ansiedade e preparo mental</h3>
-            <p>Medo, ansiedade e pensamentos sobre o que pode acontecer são comuns quando uma cirurgia se aproxima. Por isso, a Jornada Cirúrgica também inclui exercícios e estratégias para ajudar você a cuidar da mente durante esse processo.</p>
+            <p>Medo, ansiedade e pensamentos sobre o que pode acontecer são comuns quando uma cirurgia se aproxima. Por isso, a <span class="jornada">Jornada Cirúrgica</span> também inclui exercícios e estratégias para ajudar você a cuidar da mente durante esse processo.</p>
             <div class="attr">Psicóloga [NOME] · CRP [NÚMERO] · [UNIVERSIDADE] · [ESPECIALIZAÇÃO]</div>
           </div>
           <div class="bonus-card">
@@ -755,7 +738,7 @@
             <h3>Dra. Adriana Alvarenga</h3>
             <div class="role">Cirurgiã Oncológica · CRM 9199/MS</div>
             <p>Formada em Cirurgia Oncológica pelo Hospital de Câncer de Barretos, referência nacional em oncologia, com residência completa em Cirurgia Geral.</p>
-            <p style="margin-top:12px">Ao longo da prática, percebeu que preparar uma cirurgia vai muito além do procedimento. Foi dessa experiência que nasceu a Sua Jornada Cirúrgica.</p>
+            <p style="margin-top:12px">Ao longo da prática, percebeu que preparar uma cirurgia vai muito além do procedimento. Foi dessa experiência que nasceu a <span class="jornada">Sua Jornada Cirúrgica</span>.</p>
           </div>
         </div>
         <p class="mentora-credentials-label">Formação e atuação</p>
@@ -775,7 +758,7 @@
       <div class="wrap reveal-on-scroll">
         <div class="center"><h2>Ainda com dúvidas?</h2></div>
         <div class="faq" id="faq">
-          <div class="faq-item"><button class="faq-q">Mas meu médico já explica tudo isso.<span class="plus"></span></button><div class="faq-a"><p>Que bom que você tem um médico que cuida de você. A Sua Jornada Cirúrgica não substitui esse acompanhamento. Ela complementa o que acontece entre uma consulta e outra, responde às dúvidas que aparecem quando você chega em casa e organiza cada etapa da caminhada.</p></div></div>
+          <div class="faq-item"><button class="faq-q">Mas meu médico já explica tudo isso.<span class="plus"></span></button><div class="faq-a"><p>Que bom que você tem um médico que cuida de você. A <span class="jornada">Sua Jornada Cirúrgica</span> não substitui esse acompanhamento. Ela complementa o que acontece entre uma consulta e outra, responde às dúvidas que aparecem quando você chega em casa e organiza cada etapa da caminhada.</p></div></div>
           <div class="faq-item"><button class="faq-q">Esse protocolo serve apenas para cirurgias oncológicas?<span class="plus"></span></button><div class="faq-a"><p>Não. Ele foi pensado para qualquer pessoa que deseja viver uma cirurgia de forma mais consciente, organizada e preparada. O medo e a insegurança não escolhem diagnóstico.</p></div></div>
           <div class="faq-item"><button class="faq-q">Cada cirurgia é diferente, isso realmente serve para a minha?<span class="plus"></span></button><div class="faq-a"><p>Exatamente por isso o protocolo não entrega receitas prontas: ele ensina princípios para você compreender cada fase da sua própria jornada, seja qual for a cirurgia.</p></div></div>
           <div class="faq-item"><button class="faq-q">Posso participar mesmo já com a cirurgia marcada?<span class="plus"></span></button><div class="faq-a"><p>Sim. Se a cirurgia já tem data, adaptamos o ritmo da jornada ao seu tempo. <em>(rascunho, confirmar)</em></p></div></div>
@@ -794,7 +777,7 @@
       <div class="wrap center reveal-on-scroll">
         <h2>Quanto vale atravessar uma cirurgia com essa tranquilidade?</h2>
         <p class="lead">Não é sobre o que você aprende. É sobre o que você deixa de sentir: as noites em claro, a pesquisa às três da manhã, a sensação de estar montando sozinho um quebra-cabeça que ninguém te entregou completo.</p>
-        <p class="lead" style="margin-top:14px">A Jornada Cirúrgica reúne anos acompanhando pacientes, ouvindo as mesmas dúvidas se repetirem e organizando tudo isso em um método com começo, meio e fim.</p>
+        <p class="lead" style="margin-top:14px">A <span class="jornada">Jornada Cirúrgica</span> reúne anos acompanhando pacientes, ouvindo as mesmas dúvidas se repetirem e organizando tudo isso em um método com começo, meio e fim.</p>
       </div>
     </section>
 
@@ -832,7 +815,7 @@
       <div class="wrap center reveal-on-scroll">
         <p class="value-stack-label">Antes de decidir, veja tudo o que faz parte do seu preparo</p>
         <ul class="value-stack">
-          <li><b>Sua Jornada Cirúrgica</b><span>Programa completo, do "você vai precisar operar" ao retorno para casa.</span></li>
+          <li><b class="jornada">Sua Jornada Cirúrgica</b><span>Programa completo, do "você vai precisar operar" ao retorno para casa.</span></li>
           <li><b>Encontro individual com a Dra. Adriana Alvarenga</b><span>30 minutos em particular, na 8ª semana, para olhar o caminho percorrido e seguir os próximos passos com mais segurança.</span></li>
           <li><b>Orientações alimentares para o período cirúrgico</b><span>Com a Dra. Ana Alvarenga, médica nutróloga.</span></li>
           <li><b>Exercícios para ansiedade e preparo mental</b><span>Com a psicóloga [NOME].</span></li>
@@ -866,10 +849,10 @@
     <section class="section section--oliva final">
       <div class="wrap reveal-on-scroll">
         <div class="guarantee-seal"><b>7</b><span>dias</span></div>
-        <p class="big">Você tem 7 dias para conhecer a Sua Jornada Cirúrgica</p>
-        <p>Você não corre nenhum risco! Você tem 7 dias de garantia para acessar o programa, conhecer o protocolo e assistir às primeiras semanas da Sua Jornada Cirúrgica.</p>
+        <p class="big">Você tem 7 dias para conhecer a <span class="jornada">Sua Jornada Cirúrgica</span></p>
+        <p>Você não corre nenhum risco! Você tem 7 dias de garantia para acessar o programa, conhecer o protocolo e assistir às primeiras semanas da <span class="jornada">Sua Jornada Cirúrgica</span>.</p>
         <p>Se, dentro desse período, você perceber que o programa não faz sentido para o seu momento, basta solicitar o cancelamento dentro das condições da garantia.</p>
-        <p>7 dias para conhecer e decidir com tranquilidade. Queremos que você permaneça porque entende que a Sua Jornada Cirúrgica pode fazer sentido para o seu preparo, não porque se sentiu obrigado a continuar.</p>
+        <p>7 dias para conhecer e decidir com tranquilidade. Queremos que você permaneça porque entende que a <span class="jornada">Sua Jornada Cirúrgica</span> pode fazer sentido para o seu preparo, não porque se sentiu obrigado a continuar.</p>
         <a class="cta cta--gold" data-checkout href="#">Quero sentir confiança na minha Jornada Cirúrgica</a>
       </div>
     </section>
