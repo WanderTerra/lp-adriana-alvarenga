@@ -35,6 +35,8 @@
     --dourado-3:#8a6d3b;
     --dourado-linha:linear-gradient(120deg,var(--dourado-1),var(--dourado-2) 48%,var(--dourado-3));
     --dourado-solid:#a9854b;
+    /* degradê mais claro, só pro fundo dos botões de CTA — não mexe nos traços/ícones dourados do resto do site */
+    --dourado-cta:linear-gradient(120deg,#f4e9d0,var(--dourado-1) 50%,var(--dourado-2));
     --serif:'Ivyora','Cormorant Garamond', Georgia, serif; /* Ivyora entra aqui quando houver licença web */
     --sans:'Poppins', system-ui, sans-serif;
     --maxw:760px;
@@ -85,7 +87,7 @@
 
   /* ===== TÍTULO + PLAYER (mesmo fundo claro do masthead) ===== */
   .hero-eyebrow{color:var(--dourado-1);opacity:.9}
-  .hero-rule{width:90px;height:2px;border-radius:2px;margin:4px auto 14px;background:var(--dourado-linha);opacity:.9}
+  .hero-rule{width:min(280px,58%);height:2px;border-radius:2px;margin:4px auto 14px;background:var(--dourado-linha);opacity:.9}
   .hero-title{font-size:clamp(1.6rem,5vw,2.6rem);color:var(--tinta);margin:8px 0 6px}
   .hero-title em{font-style:italic;color:var(--dourado-solid)}
 
@@ -356,13 +358,24 @@
   .guarantee-seal span{font-family:var(--sans);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase}
 
   /* CTA */
-  .cta{display:inline-block;font-family:var(--sans);font-weight:500;letter-spacing:.06em;
+  .cta{display:inline-block;font-family:var(--sans);font-weight:500;letter-spacing:.06em;text-transform:uppercase;
     background:var(--oliva);color:#fff;text-decoration:none;padding:17px 34px;border-radius:99px;
     font-size:.92rem;transition:transform .25s var(--ease),background .25s;box-shadow:0 14px 30px -12px rgba(58,64,25,.6)}
   .cta:hover{background:var(--oliva-deep);transform:translateY(-2px)}
-  .cta--gold{background:var(--dourado-linha);color:#3a2e14}
-  .cta--gold:hover{filter:brightness(1.05);background:var(--dourado-linha)}
+  .cta--gold{background:var(--dourado-cta);color:#3a2e14}
+  .cta--gold:hover{filter:brightness(1.05);background:var(--dourado-cta)}
   .cta:focus-visible,.play-btn:focus-visible,.faq-q:focus-visible,.skip:focus-visible{outline:2px solid var(--dourado-1);outline-offset:3px}
+
+  /* leve "respiração" no botão de CTA pra chamar atenção, principalmente no celular
+     (onde a maioria entra e não passa o mouse por cima pra ver o hover) */
+  @media (prefers-reduced-motion: no-preference){
+    .cta--gold{animation:ctaPulse 2.6s ease-in-out infinite}
+    .cta--gold:hover,.cta--gold:focus-visible{animation-play-state:paused}
+    @keyframes ctaPulse{
+      0%,100%{transform:scale(1);box-shadow:0 14px 30px -12px rgba(58,64,25,.6)}
+      50%{transform:scale(1.035);box-shadow:0 16px 34px -10px rgba(58,64,25,.7)}
+    }
+  }
 
   /* FAQ — cada pergunta é um card independente, não uma lista corrida */
   .faq{max-width:640px;margin:30px auto 0;display:grid;gap:12px}
@@ -481,7 +494,7 @@
       <button class="skip" id="skip">Pular para a liberação (apenas no preview)</button>
       <p class="masthead-question">Você ou alguém que você ama vai passar por uma cirurgia?</p>
       
-      <p class="masthead-lead">Receba acompanhamento médico completo durante 8 semanas para entender cada etapa da sua jornada cirúrgica, preparar o corpo, a mente, a rotina e a família, e saber exatamente qual é o próximo passo antes, durante e depois do procedimento.</p>
+      <p class="masthead-lead">Saiba que você não precisa passar por isso sozinho.</p>
       <button class="scroll-cue" id="scrollCue" aria-label="Role para baixo para ver mais">
         <span>Role para baixo</span>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16l-6-6 1.4-1.4L12 13.2l4.6-4.6L18 10z"/></svg>
@@ -495,14 +508,14 @@
     <!-- O que você recebe (resumo pós-liberação) -->
     <section class="section section--salvia">
       <div class="wrap center reveal-on-scroll">
-        <h2>Enquanto o cirurgião cuida da técnica, a Jornada da Cirurgia cuida de tudo o que acontece antes e depois dela</h2>
+        <h2>Enquanto o cirurgião cuida da técnica, a Sua Jornada Cirúrgica cuida de tudo o que acontece antes e depois da sua cirurgia</h2>
         <p class="lead muted">O que você recebe:</p>
         <ul class="item-cards">
           <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Um protocolo estruturado em 8 semanas, na ordem em que a cirurgia realmente acontece</p></li>
           <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Preparo físico e emocional antes e depois do procedimento</p></li>
           <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Orientação completa para o dia da cirurgia</p></li>
           <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Orientação da alta hospitalar e da recuperação</p></li>
-          <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Orientações para que sua família saiba exatamente como cuidar de você</p></li>
+          <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Orientações para que a rede de apoio saiba exatamente como lidar com todas as etapas</p></li>
         </ul>
         <a class="cta cta--gold" data-checkout href="#" style="margin-top:26px">Quero viver minha cirurgia com segurança</a>
       </div>
@@ -511,7 +524,7 @@
     <!-- Depoimentos -->
     <section class="section section--nude">
       <div class="wrap center reveal-on-scroll">
-        <h2>Histórias de quem já passou por essa jornada</h2>
+        <h2>Histórias de quem já passou pela Jornada Cirúrgica:</h2>
         <div class="testimonials">
           <div class="testimonial-card">
             <h3>Uma recuperação mais tranquila</h3>
@@ -524,8 +537,7 @@
             <div class="attr">Paciente</div>
           </div>
         </div>
-        <p class="testimonials-note">E todos eles têm algo em comum: segurança, preparo e uma eficiente recuperação. Mais vídeos, fotos e resultados de pacientes em breve.</p>
-        <a class="cta cta--gold" data-checkout href="#" style="margin-top:22px">Quero garantir minha Jornada da Cirurgia</a>
+        <a class="cta cta--gold" data-checkout href="#" style="margin-top:22px">Quero garantir Sua Jornada Cirúrgica</a>
       </div>
     </section>
 
@@ -547,7 +559,7 @@
           <li class="mini-card punch"><p>No lugar da informação, sobra o medo.</p></li>
         </ul>
         <hr class="rule" style="margin:22px auto 0">
-        <p class="pivot-line">A Jornada Cirúrgica nasceu para ocupar exatamente <em>esse espaço vazio</em>: o intervalo entre o "você vai precisar operar" e o dia em que a vida volta ao lugar.</p>
+        <p class="pivot-line">A Sua Jornada Cirúrgica nasceu para ocupar exatamente <em>esse espaço vazio</em>: o intervalo entre o "você vai precisar operar" e o dia em que a vida volta ao lugar.</p>
       </div>
     </section>
 
@@ -564,6 +576,7 @@
           <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Já separou exames, documentos e mala. Só não preparou você.</p></li>
           <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Sua família quer ajudar, mas ninguém sabe por onde começar.</p></li>
           <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Gostaria de ter alguém por perto em cada etapa, não apenas no dia da consulta.</p></li>
+          <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Está acompanhando de perto toda a jornada da pessoa que ama e não sabe como dar o melhor suporte.</p></li>
         </ul>
         <p class="lead" style="margin-top:26px">Se você se reconheceu em qualquer uma dessas situações, esta jornada foi criada para você.</p>
         <a class="cta cta--gold" data-checkout href="#" style="margin-top:22px">Quero parar de me sentir perdida nessas situações</a>
@@ -645,7 +658,7 @@
     <section class="section section--oliva">
       <div class="wrap center reveal-on-scroll">
         <h2>Muito mais do que um curso online</h2>
-        <p class="lead">Ao entrar para a Jornada da Cirurgia, você recebe:</p>
+        <p class="lead">Ao entrar para Sua Jornada Cirúrgica, você recebe:</p>
         <ul class="item-cards item-cards--compact">
           <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>O protocolo completo de 8 semanas, organizado cronologicamente</p></li>
           <li class="item-card"><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> <p>Orientações para preparar seu organismo antes da cirurgia</p></li>
@@ -742,7 +755,7 @@
             <h3>Dra. Adriana Alvarenga</h3>
             <div class="role">Cirurgiã Oncológica · CRM 9199/MS</div>
             <p>Formada em Cirurgia Oncológica pelo Hospital de Câncer de Barretos, referência nacional em oncologia, com residência completa em Cirurgia Geral.</p>
-            <p style="margin-top:12px">Ao longo da prática, percebeu que preparar uma cirurgia vai muito além do procedimento. Foi dessa experiência que nasceu a Jornada da Cirurgia.</p>
+            <p style="margin-top:12px">Ao longo da prática, percebeu que preparar uma cirurgia vai muito além do procedimento. Foi dessa experiência que nasceu a Sua Jornada Cirúrgica.</p>
           </div>
         </div>
         <p class="mentora-credentials-label">Formação e atuação</p>
@@ -762,7 +775,7 @@
       <div class="wrap reveal-on-scroll">
         <div class="center"><h2>Ainda com dúvidas?</h2></div>
         <div class="faq" id="faq">
-          <div class="faq-item"><button class="faq-q">Mas meu médico já explica tudo isso.<span class="plus"></span></button><div class="faq-a"><p>Que bom que você tem um médico que cuida de você. A Jornada da Cirurgia não substitui esse acompanhamento. Ela complementa o que acontece entre uma consulta e outra, responde às dúvidas que aparecem quando você chega em casa e organiza cada etapa da caminhada.</p></div></div>
+          <div class="faq-item"><button class="faq-q">Mas meu médico já explica tudo isso.<span class="plus"></span></button><div class="faq-a"><p>Que bom que você tem um médico que cuida de você. A Sua Jornada Cirúrgica não substitui esse acompanhamento. Ela complementa o que acontece entre uma consulta e outra, responde às dúvidas que aparecem quando você chega em casa e organiza cada etapa da caminhada.</p></div></div>
           <div class="faq-item"><button class="faq-q">Esse protocolo serve apenas para cirurgias oncológicas?<span class="plus"></span></button><div class="faq-a"><p>Não. Ele foi pensado para qualquer pessoa que deseja viver uma cirurgia de forma mais consciente, organizada e preparada. O medo e a insegurança não escolhem diagnóstico.</p></div></div>
           <div class="faq-item"><button class="faq-q">Cada cirurgia é diferente, isso realmente serve para a minha?<span class="plus"></span></button><div class="faq-a"><p>Exatamente por isso o protocolo não entrega receitas prontas: ele ensina princípios para você compreender cada fase da sua própria jornada, seja qual for a cirurgia.</p></div></div>
           <div class="faq-item"><button class="faq-q">Posso participar mesmo já com a cirurgia marcada?<span class="plus"></span></button><div class="faq-a"><p>Sim. Se a cirurgia já tem data, adaptamos o ritmo da jornada ao seu tempo. <em>(rascunho, confirmar)</em></p></div></div>
@@ -834,7 +847,7 @@
         <p class="lead">Você não está entrando em um curso sobre cirurgia. Está entrando nas semanas que separam a notícia do dia em que a vida volta ao lugar, com um caminho na frente em vez do escuro.</p>
 
         <div class="offer">
-          <h3 style="font-size:1.4rem;margin-bottom:16px;color:var(--tinta)">Jornada da Cirurgia</h3>
+          <h3 style="font-size:1.4rem;margin-bottom:16px;color:var(--tinta)">Sua Jornada Cirúrgica</h3>
           <ul class="incl">
             <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> 8 semanas de acompanhamento</li>
             <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.5-1.5z"/></svg></span> Protocolo completo, organizado semana a semana</li>
@@ -844,7 +857,7 @@
           </ul>
           <div class="price-now">12x R$154,82</div>
           <div class="price-cash">ou R$1.497,00 à vista</div>
-          <a class="cta cta--gold" data-checkout href="#">Quero garantir minha Jornada da Cirurgia</a>
+          <a class="cta cta--gold" data-checkout href="#">Quero garantir Sua Jornada Cirúrgica</a>
         </div>
       </div>
     </section>
