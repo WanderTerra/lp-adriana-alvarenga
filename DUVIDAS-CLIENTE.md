@@ -60,3 +60,13 @@ Busquei informações públicas no site profissional dela (adrianaalvarenga.lova
 ## 8. Novo depoimento (pendente)
 
 Pedido via WhatsApp (25/08): "Vamos acrescentar apenas mais um depoimento" na seção de Histórias/Depoimentos. Ainda não recebi o conteúdo desse depoimento (texto, atribuição). **Aguardando o texto pra adicionar** — não inventei nada nesse meio tempo.
+
+## 9. Seção "Bônus" — ✅ Resolvido
+
+Pedido via WhatsApp (10/09): substituir o Bônus 01 ("encontro com a Dra. Adriana") por um card "Bônus Surpresa" — ✅ feito. Dados reais dos 4 cards, todos preenchidos com foto:
+
+- **Bônus 02 (orientações alimentares):** Dra. Ana Alvarenga, Médica Nutróloga, CRM 7229, RQE 9241 (Terapia Enteral e Parenteral) — ✅ foto e dados adicionados
+- **Bônus 03 (ansiedade/preparo mental):** Mariana Simioli, Psicóloga, CRP MS 14/08529-0 — ✅ foto e dados adicionados
+- **Bônus 04 (preparo do corpo):** Ketterson Ramires de Jesus, Educador Físico, CREF 6770-G/MS — ✅ foto e dados adicionados
+
+O conflito apontado anteriormente (dados de "Ana Alvarenga" batendo com CRM/RQE já confirmados como da própria Dra. Adriana) era mesmo uma troca/erro de digitação, como confirmado pela cliente (10/09, "Ta ao contrario"): **Ana Alvarenga é uma pessoa real e diferente, nutróloga, CRM 7229 · RQE 9241**. Gabriel Pacheco reenviou os 4 blocos de dados corretamente separados, e a cliente mandou a foto profissional dela em seguida.
