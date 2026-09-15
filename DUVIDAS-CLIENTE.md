@@ -70,3 +70,9 @@ Pedido via WhatsApp (10/09): substituir o Bônus 01 ("encontro com a Dra. Adrian
 - **Bônus 04 (preparo do corpo):** Ketterson Ramires de Jesus, Educador Físico, CREF 6770-G/MS — ✅ foto e dados adicionados
 
 O conflito apontado anteriormente (dados de "Ana Alvarenga" batendo com CRM/RQE já confirmados como da própria Dra. Adriana) era mesmo uma troca/erro de digitação, como confirmado pela cliente (10/09, "Ta ao contrario"): **Ana Alvarenga é uma pessoa real e diferente, nutróloga, CRM 7229 · RQE 9241**. Gabriel Pacheco reenviou os 4 blocos de dados corretamente separados, e a cliente mandou a foto profissional dela em seguida.
+
+## 10. Botão de compra abaixo do vídeo — tempo de liberação (pendente)
+
+Pedido via WhatsApp (15/09): adicionar um botão de compra logo abaixo do vídeo inicial, que aparece depois de um certo tempo de vídeo assistido — ✅ implementado.
+
+Por enquanto ele aparece no mesmo instante em que o resto da página é liberado (18s dos 24s do vídeo simulado — `REVEAL_AT_SECONDS` no código). **A cliente vai definir depois em qual segundo exato do vídeo real esse botão deve aparecer** (pode ser diferente do momento de liberação do resto do conteúdo). Quando ela decidir, é só me passar o tempo em segundos que eu ajusto.
