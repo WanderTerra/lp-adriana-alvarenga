@@ -453,6 +453,11 @@
   .cta--gold{background:var(--dourado-cta);color:#3a2e14}
   .cta--gold:hover{filter:brightness(1.05);background:var(--dourado-cta)}
   .cta:focus-visible,.play-btn:focus-visible,.faq-q:focus-visible,.skip:focus-visible{outline:2px solid var(--dourado-1);outline-offset:3px}
+  /* botão de compra logo abaixo do vídeo — só aparece a partir do ponto de
+     liberação (mesmo instante em que o resto do conteúdo é liberado), pra
+     quem já decidiu não precisar rolar a página até o final */
+  .early-buy-cta{display:none;margin:18px auto 0}
+  .early-buy-cta.show{display:inline-block}
 
   /* leve "respiração" no botão de CTA pra chamar atenção, principalmente no celular
      (onde a maioria entra e não passa o mouse por cima pra ver o hover) */
@@ -581,6 +586,7 @@
           <span class="time" id="time">0:00 / 0:00</span>
         </div>
       </div>
+      <a class="cta cta--gold early-buy-cta" id="earlyBuyCta" data-checkout href="#">Quero garantir Sua Jornada Cirúrgica</a>
       <div class="reveal-line-wrap"><span class="reveal-line"></span></div>
       <button class="skip" id="skip">Pular para a liberação (apenas no preview)</button>
       <button class="scroll-cue" id="scrollCue" aria-label="Role para baixo para ver mais">
@@ -975,6 +981,7 @@ const skip = document.getElementById('skip');
 const locked = document.getElementById('locked');
 const scrollCue = document.getElementById('scrollCue');
 const revealLine = document.querySelector('.reveal-line-wrap');
+const earlyBuyCta = document.getElementById('earlyBuyCta');
 
 const fmt = s => `${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`;
 
@@ -1010,6 +1017,7 @@ function revelar(){
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
     locked.classList.add('in');
     if(revealLine) revealLine.classList.add('draw'); // desenha a barra dourada sob o vídeo
+    if(earlyBuyCta) earlyBuyCta.classList.add('show'); // botão de compra logo abaixo do vídeo
     scrollCue.classList.add('show');                 // dica "role para baixo"
     observarSecoes();
     window.dispatchEvent(new Event('scroll'));        // recalcula o efeito das perguntas assim que o conteúdo aparece
