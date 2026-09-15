@@ -29,11 +29,11 @@ Os valores usados na seção de oferta hoje foram mantidos do site original (De 
 
 - Vídeo real (hoje é uma simulação)
 - Fotos/prints/depoimentos de pacientes (seção 11 do MD)
-- **Thumbnails das 8 aulas** (seção "Como funciona a Jornada Cirúrgica") — a seção agora usa cards no modelo da referência (selo + título + texto + imagem da aula), com um espaço reservado (placeholder tracejado) pronto pra cada uma das 8 semanas. Preciso de 1 imagem por semana (thumbnail/capa da aula, formato retrato) pra substituir os placeholders.
+- ~~Thumbnails das 8 aulas~~ — ✅ recebidas em 15/09 e já aplicadas nos cards (veja o item 8 sobre a divergência de títulos)
 
 ## 5. Consentimento das pacientes nos depoimentos (IMPORTANTE)
 
-A cliente enviou uma pasta do Drive com conversas reais de WhatsApp/Instagram entre pacientes e a Dra. Adriana. Usei apenas duas frases curtas e positivas dessas conversas na seção "O que dizem os pacientes", **sem nome, foto ou telefone** — atribuídas só como "Paciente".
+A cliente enviou uma pasta do Drive com conversas reais de WhatsApp/Instagram entre pacientes e a Dra. Adriana. Usei frases curtas e positivas dessas conversas (agora três, incluindo o depoimento pedido em 15/09) na seção "O que dizem os pacientes", **sem nome, foto ou telefone** — atribuídas só como "Paciente".
 
 Duas coisas que ainda precisam ser confirmadas com ela antes dessa seção ficar definitiva:
 
@@ -48,12 +48,33 @@ Preenchi a seção "Quem está por trás da sua Jornada Cirúrgica" com dados re
 
 **O que ainda falta:** o site de referência não publica números (anos de experiência, quantidade de pacientes acompanhados, quantidade de cirurgias realizadas). Removi os placeholders `+[X]` que existiam pra esses números — **se ela quiser esse tipo de estatística na página, preciso que me passe os números reais** (não posso estimar/inventar isso).
 
-## 7. Novo depoimento (pendente)
+## 7. Novo depoimento — ✅ Resolvido
 
-Pedido via WhatsApp (25/08): "Vamos acrescentar apenas mais um depoimento" na seção de Histórias/Depoimentos. Ainda não recebi o conteúdo desse depoimento (texto, atribuição). **Aguardando o texto pra adicionar** — não inventei nada nesse meio tempo.
+Pedido via WhatsApp (25/08): "Vamos acrescentar apenas mais um depoimento" na seção de Histórias/Depoimentos. Texto recebido em 15/09 ("Dra, eu amei ter você me dando total apoio e cuidado! Deus abençoe sua vida sempre.") e adicionado como terceiro card, atribuído como "Paciente" (mesmo padrão dos outros dois). Sujeito à mesma pendência de consentimento/CFM do item 5.
 
 ## 8. Botão de compra abaixo do vídeo — tempo de liberação (pendente)
 
 Pedido via WhatsApp (15/09): adicionar um botão de compra logo abaixo do vídeo inicial, que aparece depois de um certo tempo de vídeo assistido — ✅ implementado.
 
 Por enquanto ele aparece no mesmo instante em que o resto da página é liberado (18s dos 24s do vídeo simulado — `REVEAL_AT_SECONDS` no código). **A cliente vai definir depois em qual segundo exato do vídeo real esse botão deve aparecer** (pode ser diferente do momento de liberação do resto do conteúdo). Quando ela decidir, é só me passar o tempo em segundos que eu ajusto.
+
+## 9. Capas das aulas x títulos dos cards — divergência (IMPORTANTE)
+
+As 8 capas das aulas foram recebidas em 15/09 e aplicadas nos cards conforme a numeração enviada. **Mas o título escrito dentro de cada capa não bate com o título que está escrito no card ao lado:**
+
+| Semana | Título na capa (imagem) | Título atual no card (texto) |
+|---|---|---|
+| 01 | Decodificando o Diagnóstico | Antes de tudo, preparar você |
+| 02 | Organizando a sua Cirurgia | Preparar a mente |
+| 03 | Preparando Você | Preparar quem estará ao seu lado |
+| 04 | Preparando seu Retorno | O dia da cirurgia |
+| 05 | Dia D — Sua cirurgia chegou! | A alta hospitalar |
+| 06 | O Retorno | A recuperação |
+| 07 | Resultado Chegou | Recuperando sua confiança |
+| 08 | O Depois da Cirurgia | Uma nova forma de viver |
+
+Os títulos atuais dos cards vieram do MD de copy original. As capas parecem refletir uma estrutura mais nova do curso. **Não alterei os textos por conta própria** — preciso que a cliente confirme qual versão vale:
+
+1. As capas estão certas → atualizo os títulos e os textos dos 8 cards pra acompanhar (nesse caso preciso do texto descritivo de cada aula nova); ou
+2. Os textos estão certos → as capas precisam ser refeitas com os títulos corretos; ou
+3. As capas estão na ordem errada → me diga a ordem certa que eu reposiciono.
