@@ -58,23 +58,10 @@ Pedido via WhatsApp (15/09): adicionar um botão de compra logo abaixo do vídeo
 
 Por enquanto ele aparece no mesmo instante em que o resto da página é liberado (18s dos 24s do vídeo simulado — `REVEAL_AT_SECONDS` no código). **A cliente vai definir depois em qual segundo exato do vídeo real esse botão deve aparecer** (pode ser diferente do momento de liberação do resto do conteúdo). Quando ela decidir, é só me passar o tempo em segundos que eu ajusto.
 
-## 9. Capas das aulas x títulos dos cards — divergência (IMPORTANTE)
+## 9. Capas das aulas x títulos dos cards — ✅ Resolvido
 
-As 8 capas das aulas foram recebidas em 15/09 e aplicadas nos cards conforme a numeração enviada. **Mas o título escrito dentro de cada capa não bate com o título que está escrito no card ao lado:**
+Em 15/09 as capas chegaram com títulos que não batiam com o texto dos cards (os cards ainda usavam a estrutura do MD de copy original). Confirmado: **as capas estavam certas e os textos é que estavam desatualizados.**
 
-| Semana | Título na capa (imagem) | Título atual no card (texto) |
-|---|---|---|
-| 01 | Decodificando o Diagnóstico | Antes de tudo, preparar você |
-| 02 | Organizando a sua Cirurgia | Preparar a mente |
-| 03 | Preparando Você | Preparar quem estará ao seu lado |
-| 04 | Preparando seu Retorno | O dia da cirurgia |
-| 05 | Dia D — Sua cirurgia chegou! | A alta hospitalar |
-| 06 | O Retorno | A recuperação |
-| 07 | Resultado Chegou | Recuperando sua confiança |
-| 08 | O Depois da Cirurgia | Uma nova forma de viver |
+Em 16/09 a cliente enviou a arte nova das 8 capas (versão em fundo oliva escuro) junto com o texto definitivo de cada semana. Tudo já aplicado: título, frase-gancho e descrição de cada aula agora acompanham a capa correspondente.
 
-Os títulos atuais dos cards vieram do MD de copy original. As capas parecem refletir uma estrutura mais nova do curso. **Não alterei os textos por conta própria** — preciso que a cliente confirme qual versão vale:
-
-1. As capas estão certas → atualizo os títulos e os textos dos 8 cards pra acompanhar (nesse caso preciso do texto descritivo de cada aula nova); ou
-2. Os textos estão certos → as capas precisam ser refeitas com os títulos corretos; ou
-3. As capas estão na ordem errada → me diga a ordem certa que eu reposiciono.
+Estrutura final das 8 semanas: Decodificando o diagnóstico · Organizando sua cirurgia · Preparando você · Preparando seu retorno · Dia D · O retorno · Resultado chegou e agora? · Qual caminho seguir?
