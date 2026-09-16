@@ -303,14 +303,16 @@
     box-shadow:0 26px 50px -32px rgba(60,60,20,.35);
     display:grid;grid-template-columns:1fr 200px;gap:30px;align-items:center}
   .week-card-text{min-width:0}
-  .week-badge{display:inline-block;font-family:var(--sans);font-weight:600;font-size:.66rem;
+  .week-badge{display:inline-block;font-family:var(--sans);font-weight:600;font-size:.72rem;
     letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--oliva);
-    padding:6px 16px;border-radius:99px;margin-bottom:14px}
-  .week-card h3{font-size:1.3rem;margin-bottom:8px}
-  .week-card p{font-size:.96rem;color:var(--tinta-suave)}
-  /* frase-gancho de cada aula (a pergunta/chamada antes da descrição) */
-  .week-card .week-hook{font-family:var(--serif);font-style:italic;font-size:1.06rem;
-    color:var(--dourado-solid);line-height:1.35;margin-bottom:8px}
+    padding:7px 18px;border-radius:99px;margin-bottom:14px}
+  .week-card h3{font-size:1.55rem;margin-bottom:10px}
+  .week-card p{font-size:1.06rem;color:var(--tinta);line-height:1.5}
+  /* frase-gancho de cada aula (a pergunta/chamada antes da descrição).
+     Usa o dourado escuro da paleta: o --dourado-solid ficava apagado sobre
+     o branco do card (contraste ~3.4:1, abaixo do mínimo de 4.5:1) */
+  .week-card .week-hook{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.22rem;
+    color:var(--dourado-3);line-height:1.35;margin-bottom:10px}
   /* capa oficial da aula — proporção nativa da arte (2:3), sem corte, pra não
      cortar o título que faz parte da própria imagem */
   .week-cover{aspect-ratio:2/3;border-radius:14px;object-fit:cover;width:100%;display:block;
@@ -508,8 +510,9 @@
     .quotes{max-width:640px}
     .checks{width:min(820px,100%);grid-template-columns:1fr 1fr;column-gap:32px;row-gap:14px}
     .week-cards{max-width:920px}
-    .week-card h3{font-size:1.42rem}
-    .week-card p{font-size:1.02rem}
+    .week-card h3{font-size:1.72rem}
+    .week-card p{font-size:1.12rem}
+    .week-card .week-hook{font-size:1.32rem}
     .testimonials{max-width:840px}
     /* inverte a disposição no desktop: texto largo à esquerda, foto grande à direita
        (mesma referência estrutural pedida pela cliente) */
