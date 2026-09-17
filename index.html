@@ -537,7 +537,7 @@
       <!-- PLAYER TRAVADO (simulado) -->
       <div class="player">
         <div class="stage">
-          <iframe id="panda-5fe90eee-0ba2-422e-8e00-b9feedf8e8e9" src="https://player-vz-d4a05057-4c7.tv.pandavideo.com.br/embed/?v=5fe90eee-0ba2-422e-8e00-b9feedf8e8e9" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <iframe id="panda-5fe90eee-0ba2-422e-8e00-b9feedf8e8e9" src="https://player-vz-d4a05057-4c7.tv.pandavideo.com.br/embed/?v=5fe90eee-0ba2-422e-8e00-b9feedf8e8e9" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen loading="lazy" fetchpriority="high"></iframe>
         </div>
       </div>
       <a class="cta cta--gold early-buy-cta" id="earlyBuyCta" data-checkout href="#">Quero garantir Minha Jornada Cirúrgica</a>
@@ -1041,6 +1041,7 @@ window.pandascripttag = window.pandascripttag || [];
 window.pandascripttag.push(function(){
   const p = new PandaPlayer(PANDA_IFRAME_ID, {
     onReady(){
+      p.pipScrollFollow({panda_id_player: PANDA_IFRAME_ID});
       p.onEvent(e=>{
         if(e.message === 'panda_timeupdate' && e.currentTime >= REVEAL_AT_SECONDS){
           revelar();
