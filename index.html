@@ -514,7 +514,6 @@
 </style>
 </head>
 <body>
-  <div id="debugOverflow" style="position:fixed;left:0;right:0;bottom:0;z-index:999;background:#000;color:#0f0;font:10px/1.4 monospace;padding:6px 8px;white-space:pre-wrap;pointer-events:none"></div>
   <!-- SVG defs: gradiente dourado -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
@@ -1050,28 +1049,6 @@ window.pandascripttag.push(function(){
   });
 });
 
-/* ---- DEBUG TEMPORARIO: medidor de overflow horizontal pro Safari do iPhone ---- */
-function atualizarDebug(){
-  const box = document.getElementById('debugOverflow');
-  if(!box) return;
-  const html = document.documentElement;
-  const wrap = document.querySelector('.masthead .wrap');
-  const playerEl = document.querySelector('.player');
-  const stageEl = document.querySelector('.stage');
-  const ifr = document.querySelector('.stage iframe');
-  const r = el => el ? (()=>{ const b = el.getBoundingClientRect(); return `L${Math.round(b.left)} R${Math.round(b.right)} W${Math.round(b.width)}`; })() : 'n/a';
-  box.textContent = [
-    `vw=${window.innerWidth} scrollW=${html.scrollWidth} clientW=${html.clientWidth}`,
-    `wrap ${r(wrap)}`,
-    `player ${r(playerEl)}`,
-    `stage ${r(stageEl)}`,
-    `iframe ${r(ifr)}`
-  ].join('\n');
-}
-window.addEventListener('load', atualizarDebug);
-window.addEventListener('resize', atualizarDebug);
-setInterval(atualizarDebug, 1000);
-atualizarDebug();
 </script>
 </body>
 </html>
