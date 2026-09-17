@@ -97,7 +97,7 @@
   .masthead .player{margin-top:26px}
 
   /* ===== PLAYER (embed Panda Video) ===== */
-  .player{width:min(620px,94vw);margin:0 auto;border-radius:14px;overflow:hidden;
+  .player{width:min(620px,100%);margin:0 auto;border-radius:14px;overflow:hidden;
     box-shadow:0 24px 60px -24px rgba(0,0,0,.55), 0 0 0 1px rgba(201,168,107,.4);background:#2f331f}
   .stage{position:relative;aspect-ratio:16/9;max-height:80vh;background:#2f331f;overflow:hidden}
   .stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -489,7 +489,7 @@
     .offer{max-width:820px;padding:56px 52px}
     .offer-logo{width:min(440px,80%)}
     .faq{max-width:740px}
-    .player{width:min(860px,88vw)}
+    .player{width:min(860px,100%)}
     .brand-lockup{width:min(520px,42vw)}
     .masthead-question{max-width:680px;font-size:clamp(2rem,4.2vw,3.1rem)}
     .masthead-lead{max-width:620px;font-size:1.5rem}
@@ -514,6 +514,7 @@
 </style>
 </head>
 <body>
+  <div id="debugOverflow" style="position:fixed;left:0;right:0;bottom:0;z-index:999;background:#000;color:#0f0;font:10px/1.4 monospace;padding:6px 8px;white-space:pre-wrap;pointer-events:none"></div>
   <!-- SVG defs: gradiente dourado -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
@@ -1048,6 +1049,29 @@ window.pandascripttag.push(function(){
     }
   });
 });
+
+/* ---- DEBUG TEMPORARIO: medidor de overflow horizontal pro Safari do iPhone ---- */
+function atualizarDebug(){
+  const box = document.getElementById('debugOverflow');
+  if(!box) return;
+  const html = document.documentElement;
+  const wrap = document.querySelector('.masthead .wrap');
+  const playerEl = document.querySelector('.player');
+  const stageEl = document.querySelector('.stage');
+  const ifr = document.querySelector('.stage iframe');
+  const r = el => el ? (()=>{ const b = el.getBoundingClientRect(); return `L${Math.round(b.left)} R${Math.round(b.right)} W${Math.round(b.width)}`; })() : 'n/a';
+  box.textContent = [
+    `vw=${window.innerWidth} scrollW=${html.scrollWidth} clientW=${html.clientWidth}`,
+    `wrap ${r(wrap)}`,
+    `player ${r(playerEl)}`,
+    `stage ${r(stageEl)}`,
+    `iframe ${r(ifr)}`
+  ].join('\n');
+}
+window.addEventListener('load', atualizarDebug);
+window.addEventListener('resize', atualizarDebug);
+setInterval(atualizarDebug, 1000);
+atualizarDebug();
 </script>
 </body>
 </html>
