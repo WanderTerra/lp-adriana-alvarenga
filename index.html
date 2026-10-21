@@ -961,10 +961,6 @@ src="https://www.facebook.com/tr?id=1613053750286630&ev=PageView&noscript=1"
 /* ================= CONFIGURAÇÃO ================= */
 /* Link de checkout da Kiwify - todos os botoes de compra usam este valor: */
 const CHECKOUT_URL = "https://pay.kiwify.com.br/ir4nnCn";
-/* Segundo do vídeo (Panda Video) em que o botão de compra abaixo do vídeo aparece.
-   O resto do conteúdo da página fica visível desde o início (sem trava).
-   A cliente ainda vai definir o valor definitivo. */
-const REVEAL_AT_SECONDS = 18;
 /* ================================================= */
 
 let revelado = false;
@@ -981,21 +977,15 @@ function revelar(){
   locked.classList.add('enter');
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
     locked.classList.add('in');
+    if(revealLine) revealLine.classList.add('draw'); // desenha a barra dourada sob o vídeo
+    if(earlyBuyCta) earlyBuyCta.classList.add('show'); // botão de compra logo abaixo do vídeo
     scrollCue.classList.add('show');                 // dica "role para baixo"
     observarSecoes();
     window.dispatchEvent(new Event('scroll'));        // recalcula o efeito das perguntas assim que o conteúdo aparece
   }));
 }
 
-/* botão de compra logo abaixo do vídeo: aparece só no segundo definido em REVEAL_AT_SECONDS */
-let botaoLiberado = false;
-function liberarBotao(){
-  if(botaoLiberado) return; botaoLiberado = true;
-  if(revealLine) revealLine.classList.add('draw'); // desenha a barra dourada sob o vídeo
-  if(earlyBuyCta) earlyBuyCta.classList.add('show');
-}
-
-/* conteúdo liberado desde o carregamento da página */
+/* conteúdo e botão de compra liberados desde o carregamento da página */
 revelar();
 
 /* dica de rolagem: clicar leva para o conteúdo; sumir depois que a pessoa rola */
@@ -1067,7 +1057,7 @@ document.getElementById('faq').addEventListener('click', e=>{
 /* CTAs -> Kiwify */
 document.querySelectorAll('[data-checkout]').forEach(a=> a.setAttribute('href', CHECKOUT_URL));
 
-/* ---- vídeo real (Panda Video): mostra o botão de compra no segundo definido em REVEAL_AT_SECONDS ---- */
+/* ---- vídeo real (Panda Video): PIP ao rolar a página ---- */
 const PANDA_IFRAME_ID = 'panda-5fe90eee-0ba2-422e-8e00-b9feedf8e8e9';
 const PANDA_API = 'https://player.pandavideo.com.br/api.v2.js';
 if(!document.querySelector(`script[src="${PANDA_API}"]`)){
@@ -1079,11 +1069,6 @@ window.pandascripttag.push(function(){
   const p = new PandaPlayer(PANDA_IFRAME_ID, {
     onReady(){
       p.pipScrollFollow({panda_id_player: PANDA_IFRAME_ID});
-      p.onEvent(e=>{
-        if(e.message === 'panda_timeupdate' && e.currentTime >= REVEAL_AT_SECONDS){
-          liberarBotao();
-        }
-      });
     }
   });
 });
